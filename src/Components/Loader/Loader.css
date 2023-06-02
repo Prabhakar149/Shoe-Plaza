@@ -1,0 +1,11 @@
+.loader-div {
+    background: rgba(253, 253, 245, 0.75);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    text-align: center;
+    z-index: 100;
+}
+.loader{
+    background: rgba(253, 253, 245, 0.75);
+}

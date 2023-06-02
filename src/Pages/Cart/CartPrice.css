@@ -1,0 +1,36 @@
+.cart-price{
+    text-align: center;
+    padding-bottom: 2rem;
+}
+.cart-price>h3{
+    text-transform:uppercase;
+}
+.cart-price>hr{
+    width: 18rem;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+.item-details{
+    margin-left: 1rem;
+}
+.item-details>p{
+    font-weight: bold;
+    font-size: large;
+    line-height: 1;
+}
+.item-details>span{
+    position: relative;
+    left: 14rem;
+    bottom: 1.4rem;
+}
+.item-details>hr{
+    position: relative;
+    bottom: 1.6rem;
+}
+
+
+
+/* _____________________________________________________________________ */
+@media screen and (max-width:550px){
+    
+}

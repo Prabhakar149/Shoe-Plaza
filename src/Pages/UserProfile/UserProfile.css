@@ -1,0 +1,116 @@
+.user-container{
+    width: 25rem;
+    min-height: 20rem;
+    margin: 3rem auto;  
+    box-shadow: 0px 5px 15px 0px var(--primary-color);
+    font-family: "Poppins", sans-serif;
+}
+.address-container{
+    margin: 0.5rem auto;
+}
+.user-nav{
+    display: flex;
+    height: 3rem;
+    justify-content: space-around;
+    align-items: center;
+}
+.user-nav>nav{
+    padding: 14.5px 73px;
+    cursor: pointer;
+}
+.nav-btn{
+    background-color: var(--primary-color);
+    color: white;
+}
+.user-nav>nav>p{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.profile-details{
+    padding: 1.5rem;
+}
+.profile-name-email{
+    margin-top: 2rem;
+}
+.profile-name-email>p{
+    margin-top: 5px;
+}
+.profile-name-email>p>span{
+    font-weight: bold;
+    margin-right: 1rem;
+}
+.profile-details>button{
+    margin-top: 3rem;
+    border: none;
+    width: 6rem;
+    height: 2.3rem;
+    color: white;
+    background-color: #dc2626;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.profile-details>button:hover{
+    background-color: #d25656;
+}
+
+.address-details{
+    padding: 1.5rem;
+    margin-bottom: 1rem
+}
+.user-address-details{
+    /* border: 0.5px dotted var(--primary-color); */
+    box-shadow: 0px 1px 0px 0px var(--primary-color);
+    margin: 1rem 0;
+}
+.address-btn{
+    margin: 1rem 0;
+    padding-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+.address-btn>button{
+    background-color: white;
+    width: 5rem; 
+    height: 2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.edit-btn{
+    border: 1px solid gray;
+    color: gray;
+}
+.edit-btn:hover{
+    background-color: gray;
+    color: white;
+}
+.remove-btn{
+    border: 1px solid #dc2626;
+    color: #dc2626;
+}
+.remove-btn:hover{
+    background-color: #dc2626;
+    color: white;
+}
+.add-address{
+    margin-top: 2rem;
+    cursor: pointer;
+}
+.add-address:hover{
+    color: gray;
+}
+
+/* __________________________________________________________ */
+
+@media screen and (max-width:550px){
+    .user-container{
+        width: 20rem;
+        
+    }
+    .user-nav>nav{
+        padding: 14.5px 53px;
+    }
+}

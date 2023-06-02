@@ -1,0 +1,22 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  /* --primary-color: #1e90ff; */
+  --primary-color: #e3bd23;
+  --dark-primary-color: #816907;
+  --secondary-color:#a19400;
+  --white: #ffffff;
+  --gray:gray;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Rubik', sans-serif;
+ 
+}
+
+

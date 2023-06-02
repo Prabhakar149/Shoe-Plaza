@@ -1,0 +1,123 @@
+.checkout-heading{
+    text-align: center;
+    margin-top: 2rem;
+}
+.checkout-container{
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 5rem;
+}
+
+.checkout-address{
+   width: 30rem;
+   /* height: 5rem; */
+   display: flex;
+   flex-direction: column;
+}
+.checkout-address-details{
+    display: flex;
+    padding: 1rem;
+    border: 1px dashed var(--primary-color);
+    border-radius: 5px;
+    box-shadow: none;
+}
+.checkout-address-details>div{
+    margin-left: 1rem;
+}
+.address-bg{
+    border: none;
+    box-shadow: 0px 0px 15px 0px var(--primary-color);
+}
+.checkout-order-summary{
+    box-shadow: 0px 0px 15px 0px var(--primary-color);
+    width: 20rem;
+    padding-top: 1rem;
+    margin-bottom: 2rem;
+    /* height: 300px; */
+}
+.order-details{
+    text-align: center;
+    padding-bottom: 2rem;
+}
+.order-details>hr{
+    width: 18rem;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+.checkout-item-details{
+    margin-left: 1rem;
+}
+.quantity-text{
+    font-weight: bold;
+    position: relative;
+    left: 13.5rem;
+    bottom: 1.2rem;
+    text-transform: uppercase;
+}
+.checkout-item-details>p{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.checkout-item-details>div>p{
+    font-weight: bold;
+}
+.checkout-item-details>div>span{
+    position: relative;
+    left: 16rem;
+    bottom: 1rem;
+}
+.checkout-item-details>hr{
+    position: relative;
+    bottom: 1rem;
+}
+.checkout-btn > button {
+    width: 18rem;
+    height: 2rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1rem;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: bold;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .checkout-btn > button:hover {
+    background-color: var(--dark-primary-color);
+  }
+  .delivery-address{
+    text-align: center;
+  }
+  .delivery-address>hr{
+    width: 18rem;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+  }
+  .delivery-address-details{
+    text-align: start;
+    padding: 1rem 1rem;
+  }
+
+
+
+/* _____________________________________________________________________ */
+
+
+@media screen and (max-width:550px){
+    .checkout-address{
+        width: 20rem;
+     }
+     .checkout-address-details{
+        margin-bottom: 2rem;
+    }
+     
+     .checkout-order-summary{
+        width: 20rem;
+        margin-bottom: 1rem;
+    }
+}
