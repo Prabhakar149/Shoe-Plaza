@@ -1,9 +1,7 @@
 .auth-container{
-    /* border: 1px solid; */
     width: 25rem;
     height: 23rem;
     margin: 5rem auto;
-    /* box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2); */
     box-shadow: 0px 7px 29px 0px var(--primary-color);
 }
 .register-auth-container{
