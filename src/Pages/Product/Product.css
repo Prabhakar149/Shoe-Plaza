@@ -38,7 +38,6 @@
 @media screen and (max-width: 550px) {
   .filter-btn {
     display: block;
-    /* width: 22.5rem; */
     width: 100%;
     padding: 8px;
     cursor: pointer;
@@ -46,6 +45,8 @@
     color: var(--primary-color);
     font-weight: bold;
     font-family: "Poppins", sans-serif;
+    font-size: large;
+    text-transform: uppercase;
   }
   .product-list-container {
     padding: 1rem 0rem;

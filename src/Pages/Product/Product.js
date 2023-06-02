@@ -80,6 +80,7 @@ const Product = () => {
       {loader && <Loader />}
       <div className="filter-btn-div">
         <button className="filter-btn" onClick={() => setDrawer(!drawer)}>
+        <i className="fa fa-filter"></i> {"  "}
           Filter
         </button>
       </div>
