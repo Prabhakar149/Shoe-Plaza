@@ -1,7 +1,7 @@
+import "./Navbar.css";
 import { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 
-import "./Navbar.css";
 import { useData } from "../../contexts/DataContext";
 
 const Navbar = () => {
@@ -39,12 +39,8 @@ const Navbar = () => {
       <div className="navbar">
         <nav className="nav-container">
           <div className="nav-left">
-            <NavLink
-              to="/"
-              className="home-nav"
-              onClick={HomeBtnClickHandle}
-            >
-              Shoe Plaza
+            <NavLink to="/" className="home-nav" onClick={HomeBtnClickHandle}>
+               Shoe Plaza
             </NavLink>
           </div>
           <div className="nav-right">
@@ -81,8 +77,6 @@ const Navbar = () => {
                 <i className="icon fa fa-user" title="User"></i>
               </span>
             </NavLink>
-
-            
           </div>
         </nav>
       </div>

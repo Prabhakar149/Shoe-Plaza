@@ -44,7 +44,7 @@
 }
 .category{
     box-shadow: 0px 5px 15px 0px var(--primary-color);
-    width: 22rem;
+    width: 20rem;
     height: 20rem;
     margin: 1rem;
 }
@@ -60,7 +60,7 @@
     color: var(--secondary-color);
 }
 .category-image>img{
-    width: 22rem;
+    width: 20rem;
     height: 240px;
 }
 
