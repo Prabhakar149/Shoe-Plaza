@@ -6,7 +6,6 @@ import ProductsFilter from "../../Components/ProductsFilter/ProductsFilter";
 import ProductCard from "./ProductCard";
 import Loader from "../../Components/Loader/Loader";
 
-
 const Product = () => {
   const {
     products,
@@ -80,8 +79,16 @@ const Product = () => {
       {loader && <Loader />}
       <div className="filter-btn-div">
         <button className="filter-btn" onClick={() => setDrawer(!drawer)}>
-        <i className="fa fa-filter"></i> {"  "}
-          Filter
+          {drawer ? (
+            <h3>X</h3>
+            
+          ) : (
+            <>
+              {" "}
+              <i className="fa fa-filter"></i> {"  "}
+              <span>Filter</span>
+            </>
+          )}
         </button>
       </div>
       <div className="product-container">

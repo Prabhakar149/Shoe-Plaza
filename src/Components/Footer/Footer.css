@@ -1,8 +1,29 @@
 .footer-container {
-  background-color: black;
+  background-color: rgb(56, 55, 55);
   height: 7rem;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
+}
+.footer-text{
+  color: white;
+}
+.footer-links{
+  color: white;
+}
+.footer-links>ul{
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+.footer-links>ul>li{
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+a{
+  text-decoration: none;
+  color: white;
 }

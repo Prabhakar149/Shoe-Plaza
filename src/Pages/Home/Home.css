@@ -82,17 +82,18 @@
         right: 3.3rem;
     }
     .category{
-        width: 18rem;
-        height: 20rem;
+        width: 16rem;
+        height: 18rem;
         margin: 1.2rem;
     }
+    .category-image>img{
+        width: 16rem;
+        height: 220px;
+    }
     .category-name>p{
-        left:7rem;
+        left:6rem;
         top: 2rem;
         font-size: 1.2rem;
     }
-    .category-image>img{
-        width: 18rem;
-        height: 240px;
-    }
+   
 }

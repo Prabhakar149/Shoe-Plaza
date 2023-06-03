@@ -55,6 +55,7 @@
 
     .filter-container{
         width: 230px;
+        height: 75vh;
     }
     .filter-price{
         margin-left: 2.3rem;

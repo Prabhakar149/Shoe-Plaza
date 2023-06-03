@@ -71,6 +71,7 @@
 @media screen and (max-width: 550px) {
   .nav-container {
     height: 7rem;
+    overflow-x: hidden;
   }
   .home-nav {
     font-size: 1.4rem;
