@@ -35,12 +35,8 @@
   position: relative;
   right: 8rem;
 }
-.nav-right > span {
-  margin: 1.5rem;
-  font-size: 1.5rem;
-}
 .navbar-link{
-  margin: 1.5rem;
+  margin: 1.2rem;
   font-size: 1.5rem;
 }
 .icon {
@@ -70,31 +66,43 @@
   position: relative;
   right: 20px;
 }
+/* ________________________________________________ */
 
 @media screen and (max-width: 550px) {
   .nav-container {
     height: 7rem;
   }
   .home-nav {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     position: relative;
     right: 7rem;
   }
-  .nav-right > span {
-    margin: 0.7rem;
-    font-size: 1.3rem;
-  }
-  .navbar-link{
-    margin: 0.7rem;
-    font-size: 1.3rem;
-  }
   .nav-right > input {
-    width: 12rem;
-    right: 0.7rem;
+    width: 11rem;
+    left: 12.5rem;
+    bottom: 3.5rem;
   }
   .search-icon {
-    left: 0.6rem;
+    left: 17rem;
+    bottom: 3.1rem;
     z-index: 1;
+  }
+  .search {
+    outline: none;
+    padding-left: 1.8rem;
+  }
+  .navbar-link{
+    margin: 0.6rem;
+    font-size: 1.2rem;
+  }
+  .nav-right{
+    display: flex;
+    gap: 3rem;
+  }
+  .icon{
+    position: relative;
+    right: 10rem;
+    margin-right: 1px;
   }
   .icon > span {
     width: 15px;

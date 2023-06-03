@@ -4,7 +4,7 @@ import { useNavigate } from "react-router";
 
 import { useData } from "../../contexts/DataContext";
 import Loader from "../../Components/Loader/Loader";
-
+import Footer from "../../Components/Footer/Footer";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -62,6 +62,7 @@ const Home = () => {
             ))}
         </div>
       </div>
+      <Footer />
     </>
   );
 };

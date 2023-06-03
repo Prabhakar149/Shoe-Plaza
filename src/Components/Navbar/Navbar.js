@@ -40,7 +40,7 @@ const Navbar = () => {
         <nav className="nav-container">
           <div className="nav-left">
             <NavLink to="/" className="home-nav" onClick={HomeBtnClickHandle}>
-               Shoe Plaza
+              Shoe Plaza
             </NavLink>
           </div>
           <div className="nav-right">
@@ -51,6 +51,12 @@ const Navbar = () => {
               placeholder="Search shoes by color"
               onChange={searchHandler}
             ></input>
+            
+            <NavLink to="/product" style={activeLink}>
+              <span className="navbar-link">
+                <i className="icon fa fa-shopping-bag" title="Products"></i>
+              </span>
+            </NavLink>
 
             <NavLink to="/wishlist" style={activeLink}>
               <span className="navbar-link">
