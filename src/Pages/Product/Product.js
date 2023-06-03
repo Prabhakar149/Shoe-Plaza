@@ -71,9 +71,10 @@ const Product = () => {
       )
     : [...finalData];
 
-  // const finalProducts = search ? finalData.filter(product=>product.color.toLowerCase()=== search.toLowerCase()) : [...finalData]
 
   //---------------------------------------------------------
+
+
   return (
     <>
       {loader && <Loader />}

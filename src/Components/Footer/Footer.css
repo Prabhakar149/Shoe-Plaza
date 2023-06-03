@@ -27,3 +27,6 @@ a{
   text-decoration: none;
   color: white;
 }
+.footer-links>ul>li>a:hover{
+  color: blue;
+}

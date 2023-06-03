@@ -16,5 +16,13 @@ body{
   min-height: 100vh;
   font-family: 'Rubik', sans-serif;
 }
+::-webkit-scrollbar{
+  -webkit-appearance: none;
+  width: 5px;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 4px;
+  background-color: var(--gray);
+}
 
 
