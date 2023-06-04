@@ -13,7 +13,6 @@
     padding-top: 2.5rem;
 }
 .bg-img-container {
-    background-image: url('../../assets/Home-cover-img.jpg');
     background-image: url('../../assets/cover.jpg');
     background-position: center;
     background-size: cover;
@@ -86,7 +85,7 @@
     }
     .home-btn{
         top: 5.5rem;
-        right: 3.5rem;
+        right: 4rem;
     }
     .category{
         width: 16rem;
