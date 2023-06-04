@@ -1,7 +1,7 @@
 
 .home-container{
     font-family: 'Montserrat', sans-serif;
-    padding: 3rem 4rem;
+    padding: 3rem 6rem;
 }
 .heading{
     text-align: center;
@@ -19,6 +19,7 @@
     height: 30rem;
     opacity: 0.9;
     background-size:contain;
+    cursor: pointer;
 }
 .home-btn{
     margin:10rem;
