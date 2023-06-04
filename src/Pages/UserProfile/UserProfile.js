@@ -10,7 +10,7 @@ import Loader from "../../Components/Loader/Loader";
 
 const UserProfile = () => {
   const { user, setToken, setUser } = useAuth();
-  const { dispatch, address, loader, setLoader } = useData();
+  const {products, dispatch, address, loader, setLoader } = useData();
   const navigate = useNavigate();
   const [isProfileChecked, setIsProfileChecked] = useState(true);
   const [addNewAddress, setAddNewAddress] = useState(false);
@@ -37,6 +37,10 @@ const UserProfile = () => {
     localStorage.removeItem("user");
     setToken("");
     setUser("");
+    dispatch({
+      type: "CLEAR",
+      payload: products,
+    });
     navigate("/userprofile");
   };
 
