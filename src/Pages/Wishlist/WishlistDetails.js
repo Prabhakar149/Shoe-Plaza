@@ -17,7 +17,7 @@ const WishlistDetails = ({ product }) => {
   const navigate = useNavigate();
 
   const cartBtnTxt = cart?.find((item) => item._id === _id)
-    ? "Already in Cart (Increase the Quantity)"
+    ? "Added to Cart (+)"
     : "Move to Cart";
 
   const productClickHandler = () => {
@@ -32,7 +32,6 @@ const WishlistDetails = ({ product }) => {
     } else {
       updateCartQuantity("Increase",_id,dispatch,token);
       toast.success("Item increased by 1 in the Cart!");
-      // navigate("/cart");
     }
   };
 
