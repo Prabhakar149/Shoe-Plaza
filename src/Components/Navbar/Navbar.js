@@ -3,10 +3,12 @@ import { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 
 import { useData } from "../../contexts/DataContext";
+import { useAuth } from "../../contexts/AuthContext";
 
 const Navbar = () => {
   const navigate = useNavigate();
   const { products, cart, wishlist, dispatch } = useData();
+  const { token } = useAuth();
   const [searchInput, setSearchInput] = useState();
 
   const activeLink = ({ isActive }) => {
@@ -51,7 +53,7 @@ const Navbar = () => {
               placeholder="search shoes by color"
               onChange={searchHandler}
             ></input>
-            
+
             <NavLink to="/product" style={activeLink}>
               <span className="navbar-link">
                 <i className="icon fa fa-shopping-bag" title="Products"></i>
@@ -80,7 +82,11 @@ const Navbar = () => {
 
             <NavLink to="/userprofile" style={activeLink}>
               <span className="navbar-link">
-                <i className="icon fa fa-user" title="User"></i>
+                {token ? (
+                  <i className="icon fa fa-user" title="User"></i>
+                ) : (
+                  <i className="icon fa fa-sign-in" title="login"></i>
+                )}
               </span>
             </NavLink>
           </div>

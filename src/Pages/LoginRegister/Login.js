@@ -87,6 +87,11 @@ const Login = () => {
             ></input>
           </div>
           <div className="auth-btn">
+            <button>
+              Login
+            </button>
+          </div>
+          <div className="auth-btn">
             <button onClick={loginButtonHandle}>
               Login with Test Credentials
             </button>

@@ -36,18 +36,19 @@
   right: 8rem;
 }
 .navbar-link{
-  margin: 1.2rem;
+  margin: 1.8rem;
   font-size: 1.5rem;
 }
 .icon {
+  position: relative;
   cursor: pointer;
 }
 .icon > span {
   color: white;
-  position: relative;
+  position: absolute;
   font-size: 15px;
-  bottom: 16px;
-  right: 10px;
+  left: 15px;
+  top: -9px;
   border-radius: 50%;
   background-color: var(--gray);
   display: inline-block;
@@ -106,9 +107,9 @@
     margin-right: 1px;
   }
   .icon > span {
-    width: 15px;
-    height: 15px;
-    bottom: 12px;
-    right: 12px;
+    width: 17px;
+    height: 17px;
+    font-size: 10px;
+    left: 10px;
   }
 }
