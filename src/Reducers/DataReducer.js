@@ -10,17 +10,18 @@ export const initialState = {
   sortByRating: "",
   sortByPrice: "",
   search: "",
-  address:[{
-    id:uuid(),
-    fName: "Aman",
-    lName: "Mishra",
-    mobile: "9876543210",
-    town: "ward 45, Right Town",
-    pincode: "482001",
-    city: "Jabalpur",
-    state: "Madhya Pradesh",
-  },
-]
+  address: [
+    {
+      id: uuid(),
+      fName: "Aman",
+      lName: "Mishra",
+      mobile: "9876543210",
+      town: "ward 45, Right Town",
+      pincode: "482001",
+      city: "Jabalpur",
+      state: "Madhya Pradesh",
+    },
+  ],
 };
 
 export const dataReducer = (state, action) => {
@@ -61,6 +62,11 @@ export const dataReducer = (state, action) => {
         ...state,
         sortByPrice: action.payload,
       };
+    case "SEARCH":
+      return {
+        ...state,
+        search: action.payload,
+      };
     case "CLEAR":
       return {
         ...state,
@@ -71,27 +77,22 @@ export const dataReducer = (state, action) => {
         search: "",
         products: action.payload,
       };
-    case "SEARCH":
+    case "ADD_NEW_ADDRESS":
       return {
         ...state,
-        search: action.payload,
+        address: [...state.address, { ...action.payload }],
       };
-    case "ADD_NEW_ADDRESS":
-      return{
-        ...state,
-        address:[...state.address, {...action.payload}]
-      }
     case "REMOVE_ADDRESS":
-      return{
+      return {
         ...state,
-        address: state.address.filter((add,index)=>index !== action.payload)
-      }
+        address: state.address.filter((add, index) => index !== action.payload),
+      };
     case "EDIT_EXISTING_ADDRESS":
       state.address[action.payload[0]] = action.payload[1];
-      return{
+      return {
         ...state,
-        address:[...state.address]
-      }
+        address: [...state.address],
+      };
     case "ADD_TO_CART":
       return {
         ...state,

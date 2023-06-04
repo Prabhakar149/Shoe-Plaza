@@ -56,7 +56,7 @@
   text-align: center;
 }
 .icon:hover {
-  color: var(--dark-primary-color);
+  color: var(--secondary-color);
 }
 .search {
   outline: none;

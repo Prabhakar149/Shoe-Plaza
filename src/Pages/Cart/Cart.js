@@ -19,7 +19,7 @@ const Cart = () => {
 
   return (
     <div className="cart-container">
-      <h1>My Cart ({cartLength})</h1>
+      <h2>My Cart ({cartLength})</h2>
       {cartLength > 0 ? (
         <div className="cart-details-main">
           <div className="cart-main">

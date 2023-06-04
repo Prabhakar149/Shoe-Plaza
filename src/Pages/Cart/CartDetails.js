@@ -60,7 +60,7 @@ const CartDetails = ({ product }) => {
             onClick={() => updateCartQtyBtnHandler("Decrease")}
             disabled={qty === 1 ? true : false}
             style={{
-              backgroundColor: qty === 1 ? "rgb(225, 223, 223)" : "#e3bd23",
+              backgroundColor: qty === 1 ? "rgb(225, 223, 223)" : "#4F709C",
             }}
           >
             -

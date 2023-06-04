@@ -6,7 +6,7 @@
 .heading{
     text-align: center;
     padding-bottom: 2.5rem;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font-size: 1rem;
 }
 .para{
@@ -14,16 +14,18 @@
 }
 .bg-img-container {
     background-image: url('../../assets/Home-cover-img.jpg');
+    background-image: url('../../assets/cover.jpg');
     background-position: center;
     background-size: cover;
     height: 30rem;
-    opacity: 0.8;
+    opacity: 0.9;
+    background-size:contain;
 }
 .home-btn{
     margin:10rem;
     position: relative;
-    top:10rem;
-    width: 8rem;
+    top:15rem;
+    width: 9rem;
     height: 2.2rem;
     border: none;
     background-color: white;
@@ -35,6 +37,10 @@
     cursor: pointer;
     z-index: 0;
 }
+.home-btn:hover{
+    background-color: var(--primary-color);
+    color: #fff;
+}
 .category-container{
     display: flex;
     flex-wrap: wrap;
@@ -43,7 +49,7 @@
     cursor: pointer;
 }
 .category{
-    box-shadow: 0px 5px 15px 0px var(--primary-color);
+    box-shadow: 0px 5px 10px 0px var(--gray);
     width: 20rem;
     height: 20rem;
     margin: 1rem;
@@ -57,7 +63,7 @@
     top: 2rem;
     font-size: 1.3rem;
     font-weight: bold;
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 .category-image>img{
     width: 20rem;
@@ -71,15 +77,16 @@
         overflow-x: hidden;
     }
     .heading{    
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
     .bg-img-container {
-        height: 30rem;
-        width: 20rem
+        height: 20rem;
+        width: 20rem;
+        background-size: 28rem;
     }
     .home-btn{
-        top: 16.5rem;
-        right: 3.3rem;
+        top: 5.5rem;
+        right: 3.5rem;
     }
     .category{
         width: 16rem;

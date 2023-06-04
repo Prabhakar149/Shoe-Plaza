@@ -8,7 +8,7 @@ import Footer from "../../Components/Footer/Footer";
 
 const Home = () => {
   const navigate = useNavigate();
-  const { categories, dispatch, loader, setLoader } = useData();
+  const {products, categories, dispatch, loader, setLoader } = useData();
 
   const categoryClickHandler = (categoryName) => {
     const val = categoryName;
@@ -23,14 +23,18 @@ const Home = () => {
   useEffect(() => {
     setLoader(true);
     setTimeout(() => setLoader(false), 500);
-  }, [setLoader]);
+    dispatch({
+      type: "CLEAR",
+      payload: products,
+    });
+  }, [dispatch,products,setLoader]);
 
   return (
     <>
       <div className="home-container">
         {loader && <Loader />}
         <div className="heading">
-          <h1>Welcome To Shoe Plaza</h1>
+          <h2>Welcome To Shoe Plaza</h2>
         </div>
 
         <div className="bg-img-container">

@@ -11,7 +11,7 @@ const Navbar = () => {
 
   const activeLink = ({ isActive }) => {
     return {
-      color: isActive ? "#816907" : "white",
+      color: isActive ? "#213555" : "white",
     };
   };
 
@@ -48,7 +48,7 @@ const Navbar = () => {
             <input
               className="search"
               type="search"
-              placeholder="Search shoes by color"
+              placeholder="search shoes by color"
               onChange={searchHandler}
             ></input>
             

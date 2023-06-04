@@ -1,9 +1,9 @@
 .card{
     width: 275px;
-    min-height: 400px;
+    height: 390px;
     margin: 1.2rem;
     padding: 1rem;
-    box-shadow: 0px 5px 15px 0px var(--primary-color);
+    box-shadow: 0px 5px 10px 0px var(--gray);
     cursor: pointer;
 }
 .card:hover{
@@ -81,30 +81,34 @@
 @media screen and (max-width:550px){
     .card{
         width: 145px;
-        min-height: 350px;
+        /* min-height: 350px; */
+        height: 280px;
         margin: 1rem;
     }
     .card-img{
         width: 140px;
-        height: 160px;
+        height: 140px;
     }
     .wishlist-icon{
-        bottom: 10.5rem;
+        bottom: 9.5rem;
+    }
+    .card-details{
+        margin-top: -2.8rem;
     }
     .card-details>p{
         left:0;
         top:0;
-        margin-top: 5px;
+        margin-top: 3px;
         margin-bottom: 10px;
     }
     .price>p>span{
         margin-left: 12px;
     }
     .per{
-        margin-top: 10px;
+        margin-top: 7px;
     }
     .add-to-cart{
-        margin-top: 1.4rem;
+        margin-top: 0.5rem;
     }
     .add-to-cart>button{
         width: 7rem;

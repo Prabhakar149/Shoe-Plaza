@@ -58,7 +58,7 @@
     font-weight: bold;
   }
   .wishlist-item-card-btn > button:hover {
-    background-color: var(--dark-primary-color);
+    background-color: var(--secondary-color);
   }
   .item-wishlist > button {
     background-color: var(--white);

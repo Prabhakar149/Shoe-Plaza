@@ -46,19 +46,6 @@ export const products = [
     description:"Men Blue Mesh High-Top Walking and Running Shoes"
   },
   {
-    _id: "d8382a09-92ea-4e57-8c17-075c6ac1b386",
-    img:"https://res.cloudinary.com/dlni6frrw/image/upload/v1684258111/Shoes/Sports_Shoes/sports2_gb20zx.jpg",
-    brand:"Red Tape",
-    rating:"3.7",
-    total_reviews:"1.3k",
-    price: "499",
-    original_price:"1199",
-    categoryName: "Sports",
-    delivery_time: '7',
-    color:"Yellow",
-    description:"Running Sports Yellow Shoes"
-  },
-  {
     _id: "900f069b-60ec-4b5d-a774-3eef0d793365",
     img:"https://res.cloudinary.com/dlni6frrw/image/upload/v1684391772/Shoes/Sneakers/sneaker10_jev8om.jpg",
     brand:"Asian",
@@ -72,8 +59,21 @@ export const products = [
     description:"White Stylish Sneaker for Men"
   },
   {
+    _id: "d8382a09-92ea-4e57-8c17-075c6ac1b386",
+    img:"https://res.cloudinary.com/dlni6frrw/image/upload/v1685856105/Shoes/Sports_Shoes/sports4_s1ugum.jpg",
+    brand:"Adidas",
+    rating:"4.3",
+    total_reviews:"1.3k",
+    price: "1299",
+    original_price:"1799",
+    categoryName: "Sports",
+    delivery_time: '7',
+    color:"Yellow",
+    description:"Running Sports Yellow Shoes"
+  },
+  {
     _id: "dee4a28b-1871-4a57-804e-584909b62504",
-    img:"https://res.cloudinary.com/dlni6frrw/image/upload/v1684250073/Shoes/sneaker2_imgoza.jpg",
+    img:"https://res.cloudinary.com/dlni6frrw/image/upload/v1685855433/Shoes/Sneakers/sneaker13_qpyb29.jpg",
     brand:"Roadster",
     rating:"2.9",
     total_reviews:"3.3k",
@@ -81,12 +81,12 @@ export const products = [
     original_price:"1899",
     categoryName: "Sneakers",
     delivery_time: '8',
-    color:"Orange",
-    description:"Men Orange Casual Sneaker"
+    color:"Black",
+    description:"Men Black Casual Sneaker"
   },
   {
     _id: "cd811471-49b4-4ef3-8d39-a8c7f3cebca0",
-    img:"https://res.cloudinary.com/dlni6frrw/image/upload/v1684258923/Shoes/Loafers/Loafer2_avckfe.jpg",
+    img:"https://res.cloudinary.com/dlni6frrw/image/upload/v1685856660/Shoes/Loafers/Loafers6_jumlfq.jpg",
     brand:"Big Fox",
     rating:"3.8",
     total_reviews:"1.1k",
@@ -165,11 +165,11 @@ export const products = [
   {
     _id: "1d6ec3c3-f9e1-4aba-98e8-31ba5f2fcd49",
     img:"https://res.cloudinary.com/dlni6frrw/image/upload/v1684258111/Shoes/Sports_Shoes/sports3_g8z0pn.jpg",
-    brand:"Adidas",
-    rating:"4.3",
+    brand:"Red Tape",
+    rating:"3.8",
     total_reviews:"1.4k",
-    price: "1299",
-    original_price:"1799",
+    price: "499",
+    original_price:"1199",
     categoryName: "Sports",
     delivery_time: '8',
     color:"White",

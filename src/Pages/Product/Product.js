@@ -71,9 +71,7 @@ const Product = () => {
       )
     : [...finalData];
 
-
   //---------------------------------------------------------
-
 
   return (
     <>
@@ -82,7 +80,6 @@ const Product = () => {
         <button className="filter-btn" onClick={() => setDrawer(!drawer)}>
           {drawer ? (
             <h3>X</h3>
-            
           ) : (
             <>
               {" "}

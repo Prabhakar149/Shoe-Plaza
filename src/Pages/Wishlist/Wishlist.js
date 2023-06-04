@@ -9,7 +9,7 @@ const Wishlist = () => {
   return (
     <>
       <div className="wishlist-container">
-        <h1>My Wishlist ({wishlist.length})</h1>
+        <h2>My Wishlist ({wishlist.length})</h2>
         {wishlist.length > 0 ? (
           <div className="wishlist-details-main">
             <div className="wishlist-main">

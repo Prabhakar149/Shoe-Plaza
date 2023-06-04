@@ -4,8 +4,12 @@
     overflow-x: hidden;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.wishlist-container>h2{
+    color: var(--primary-color);
+}
 .empty-wishlist{
     margin-top: 2rem;
+    color: var(--primary-color);
 }
 .wishlist-details-main{
     padding: 2rem;
@@ -29,7 +33,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     margin: 1.5rem;
-    box-shadow: 0px 5px 15px 0px var(--primary-color);
+    box-shadow: 0px 5px 10px 0px var(--gray);
 }
 .wishlist-price-details{
     position: sticky;
