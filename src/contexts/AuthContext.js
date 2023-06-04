@@ -26,10 +26,15 @@ const AuthProvider = ({ children }) => {
         });
         const { foundUser, encodedToken } = await response.json();
 
-        localStorage.setItem("login", JSON.stringify({ token: encodedToken }));
-        localStorage.setItem("user", JSON.stringify({ user: foundUser }));
-        setToken(encodedToken);
-        setUser(foundUser);
+        if(response.status === 200){
+          localStorage.setItem("login", JSON.stringify({ token: encodedToken }));
+          localStorage.setItem("user", JSON.stringify({ user: foundUser }));
+          setToken(encodedToken);
+          setUser(foundUser);
+        }else{
+          toast.warning(response.statusText);
+        }
+        
       } catch (err) {
         console.error(err);
       }
@@ -51,10 +56,13 @@ const AuthProvider = ({ children }) => {
         })
         const { createdUser, encodedToken } = await response.json();
 
-        localStorage.setItem("register", JSON.stringify({ token: encodedToken }));
-        localStorage.setItem("user", JSON.stringify({ user: createdUser }));
-        setToken(encodedToken);
-        setUser(createdUser);
+        if(response.status === 200){
+          localStorage.setItem("register", JSON.stringify({ token: encodedToken }));
+          localStorage.setItem("user", JSON.stringify({ user: createdUser }));
+          setToken(encodedToken);
+          setUser(createdUser);
+        }
+      
         
       }catch(err){
         console.error(err);

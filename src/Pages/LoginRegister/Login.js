@@ -47,6 +47,7 @@ const Login = () => {
     });
   };
 
+
   const inputChangeHandler = (e) => {
     const { name, value } = e.target;
     setLoginDtails((prev) => ({
@@ -54,6 +55,7 @@ const Login = () => {
       [name]: value,
     }));
   };
+
 
   return (
     <>
@@ -86,11 +88,7 @@ const Login = () => {
               onChange={inputChangeHandler}
             ></input>
           </div>
-          <div className="auth-btn">
-            <button>
-              Login
-            </button>
-          </div>
+    
           <div className="auth-btn">
             <button onClick={loginButtonHandle}>
               Login with Test Credentials
