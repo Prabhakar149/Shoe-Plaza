@@ -37,8 +37,8 @@ const Home = () => {
           <h2>Welcome To Shoe Plaza</h2>
         </div>
 
-        <div className="bg-img-container">
-          <button className="home-btn" onClick={() => navigate("/product")}>
+        <div className="bg-img-container" onClick={() => navigate("/product")}>
+          <button className="home-btn">
             Shop Now
           </button>
         </div>
