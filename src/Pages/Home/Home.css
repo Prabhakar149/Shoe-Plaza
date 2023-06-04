@@ -71,7 +71,7 @@
 }
 
 /* mobile device */
-@media screen and (max-width:550px){
+@media screen and (max-width:750px){
     .home-container{
         padding: 3rem 1.2rem;
         overflow-x: hidden;
@@ -81,7 +81,6 @@
     }
     .bg-img-container {
         height: 20rem;
-        width: 20rem;
         background-size: 28rem;
     }
     .home-btn{

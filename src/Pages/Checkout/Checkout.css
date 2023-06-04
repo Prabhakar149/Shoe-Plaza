@@ -1,6 +1,7 @@
 .checkout-heading{
     text-align: center;
     margin-top: 2rem;
+    color: var(--primary-color);
 }
 .checkout-container{
     margin-top: 5rem;
@@ -34,7 +35,6 @@
     width: 20rem;
     padding-top: 1rem;
     margin-bottom: 2rem;
-    /* height: 300px; */
 }
 .order-details{
     text-align: center;
@@ -107,7 +107,7 @@
 /* _____________________________________________________________________ */
 
 
-@media screen and (max-width:550px){
+@media screen and (max-width:750px){
     .checkout-address{
         width: 20rem;
      }

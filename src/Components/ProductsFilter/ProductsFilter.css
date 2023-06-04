@@ -53,11 +53,11 @@
 
 
 
-@media screen and (max-width:550px){
+@media screen and (max-width:750px){
 
     .filter-container{
         width: 230px;
-        height: 75vh;
+        height: 85vh;
     }
     .filter-price{
         margin-left: 2.3rem;

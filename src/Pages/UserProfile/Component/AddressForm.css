@@ -52,7 +52,7 @@
 }
 
 /* ____________________________________________________ */
-@media screen and (max-width:550px){
+@media screen and (max-width:750px){
     .address-inputs>input{
         width: 16rem;
     }

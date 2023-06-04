@@ -1,6 +1,6 @@
 .auth-container{
     width: 25rem;
-    height: 23rem;
+    height: 20rem;
     margin: 5rem auto;
     box-shadow: 0px 5px 10px 0px var(--gray);
 }
@@ -61,12 +61,12 @@
     font-weight: bold;
 }
 
+/* ____________________________________________________________ */
 
-
-@media screen and (max-width:550px){
+@media screen and (max-width:750px){
     .auth-container{
         width: 20rem;
-        height: 25rem;
+        height: 20rem;
     }
     .register-auth-container{
         height: 28rem;

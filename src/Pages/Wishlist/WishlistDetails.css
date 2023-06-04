@@ -67,14 +67,17 @@
   
   /* _______________________________________________________ */
   
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: 750px) {
+    .wishlist-item-container {
+      gap: 10px;
+    }
     .wishlist-item-container > div {
-      width: 168px;
+      width: 156px;
       height: 223px;
     }
     .wishlist-img > img {
-      width: 150px;
-      height: 150px;
+      width: 140px;
+      height: 140px;
     }
     .wishlist-item-details{
         margin-left: -10px;
@@ -92,7 +95,7 @@
       margin-top: 0.3rem;
     }
     .wishlist-item-card-btn > button {
-      width: 10.4rem;
+      width: 10rem;
       height: 2rem;
       font-size: small;
     }

@@ -26,7 +26,7 @@
 }
 .cart-details{
     width: 32rem;
-    height: 16rem;
+    min-height: 16rem;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -67,10 +67,10 @@
 
 /* ____________________________________________________________________ */
 
-@media screen and (max-width:550px){
+@media screen and (max-width:750px){
     .cart-details{
-        width: 21rem;
-        height: 15rem;
+        width: 20rem;
+        height: 17rem;
         margin-right: 1.5rem;
     }
     .cart-price-details{

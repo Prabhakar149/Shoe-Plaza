@@ -35,7 +35,9 @@
   flex-wrap: wrap;
 }
 
-@media screen and (max-width: 550px) {
+/* _________________________________________________ */
+
+@media screen and (max-width: 750px) {
   .filter-btn {
     display: block;
     width: 100%;
