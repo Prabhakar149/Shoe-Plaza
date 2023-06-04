@@ -37,10 +37,7 @@ const UserProfile = () => {
     localStorage.removeItem("user");
     setToken("");
     setUser("");
-    navigate("/");
-    dispatch({
-      type: "LOGOUT",
-    });
+    navigate("/userprofile");
   };
 
   const profileNavClickhandler = () => {

@@ -118,16 +118,6 @@ export const dataReducer = (state, action) => {
         ...state,
         wishlist: action.payload,
       };
-    case "LOGOUT":
-      return {
-        ...state,
-        cart: [],
-        priceRange: "1500",
-        selectedCategory: [],
-        sortByRating: "",
-        sortByPrice: "",
-        search: "",
-      };
     default:
       return state;
   }

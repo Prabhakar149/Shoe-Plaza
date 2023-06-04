@@ -63,9 +63,11 @@ const Navbar = () => {
             <NavLink to="/wishlist" style={activeLink}>
               <span className="navbar-link">
                 <i className="icon fa fa-heart" title="Wishlist">
-                  <span style={{ display: wishlist.length === 0 && "none" }}>
-                    {wishlist.length}
-                  </span>
+                  {token && (
+                    <span style={{ display: wishlist.length === 0 && "none" }}>
+                      {wishlist.length}
+                    </span>
+                  )}
                 </i>
               </span>
             </NavLink>
@@ -73,9 +75,11 @@ const Navbar = () => {
             <NavLink to="/cart" style={activeLink}>
               <span className="navbar-link">
                 <i className="icon fa fa-shopping-cart" title="Cart">
-                  <span style={{ display: cart.length === 0 && "none" }}>
-                    {cart.length}
-                  </span>
+                  {token && (
+                    <span style={{ display: cart.length === 0 && "none" }}>
+                      {cart.length}
+                    </span>
+                  )}
                 </i>
               </span>
             </NavLink>
