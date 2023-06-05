@@ -23,8 +23,8 @@
     cursor: pointer;
     font-size: 1.3rem;
 }
-.wishlist-icon:hover{
-    color: var(--primary-color);
+.wishlist-icon>i:hover{
+    color: red;
 }
 .card-details{
     margin-top: -2rem;
