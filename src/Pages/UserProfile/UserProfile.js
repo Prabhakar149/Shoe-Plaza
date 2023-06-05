@@ -41,7 +41,8 @@ const UserProfile = () => {
       type: "CLEAR",
       payload: products,
     });
-    navigate("/userprofile");
+    navigate("/login");
+    toast.success("Logged out successfully !");
   };
 
   const profileNavClickhandler = () => {

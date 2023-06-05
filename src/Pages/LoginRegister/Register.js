@@ -1,8 +1,10 @@
 import "./LoginRegister.css";
 import { useNavigate } from "react-router";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 import { useAuth } from "../../contexts/AuthContext";
+
 
 const Register = () => {
   const navigate = useNavigate();
@@ -17,13 +19,20 @@ const Register = () => {
   });
 
   const registerBtnHandler = () => {
-    registerUser(
-      registerDetails.email,
-      registerDetails.password,
-      registerDetails.firstName,
-      registerDetails.lastName
-    );
-    navigate("/userprofile");
+    if(registerDetails.email && registerDetails.password && registerDetails.firstName && registerDetails.lastName){
+      registerUser(
+        registerDetails.email,
+        registerDetails.password,
+        registerDetails.firstName,
+        registerDetails.lastName
+      ); 
+      navigate("/userprofile");
+      toast.success("SUccessfully Registered !");
+    }
+    else{
+      toast.warning("Please fill all the details !")
+    }
+   
   };
 
   const inputChangeHandler = (e) => {

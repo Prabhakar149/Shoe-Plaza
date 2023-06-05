@@ -26,7 +26,7 @@ const AuthProvider = ({ children }) => {
         });
         const { foundUser, encodedToken } = await response.json();
 
-        if(response.status === 200){
+        if(response.status === 200 || response.status === 201){
           localStorage.setItem("login", JSON.stringify({ token: encodedToken }));
           localStorage.setItem("user", JSON.stringify({ user: foundUser }));
           setToken(encodedToken);
@@ -56,11 +56,14 @@ const AuthProvider = ({ children }) => {
         })
         const { createdUser, encodedToken } = await response.json();
 
-        if(response.status === 200){
+        if(response.status === 200 || response.status === 201){
           localStorage.setItem("register", JSON.stringify({ token: encodedToken }));
           localStorage.setItem("user", JSON.stringify({ user: createdUser }));
           setToken(encodedToken);
           setUser(createdUser);
+        }
+        else{
+          toast.warning(response.statusText);
         }
       
         

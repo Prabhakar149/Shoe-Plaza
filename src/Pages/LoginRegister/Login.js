@@ -1,10 +1,12 @@
 import "./LoginRegister.css";
 import { useLocation, useNavigate } from "react-router";
 import { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 import { useAuth } from "../../contexts/AuthContext";
 import { useData } from "../../contexts/DataContext";
 import Loader from "../../Components/Loader/Loader";
+
 
 const Login = () => {
   const navigate = useNavigate();
@@ -25,7 +27,8 @@ const Login = () => {
   useEffect(() => {
     loginUser(loginDetails.email, loginDetails.password);
     if (token) {
-      navigate(location?.state?.from?.pathname || "/product");
+      navigate(location?.state?.from?.pathname || "/product");     
+      toast.success("Logged in successfully !");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [token, loginDetails.email, loginDetails.password]);
