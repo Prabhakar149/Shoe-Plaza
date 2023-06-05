@@ -7,6 +7,7 @@ import { useAuth } from "../../contexts/AuthContext";
 const Register = () => {
   const navigate = useNavigate();
   const { registerUser } = useAuth();
+  const [showPassword, setShowPassword] = useState(false);
 
   const [registerDetails, setRegisterDetails] = useState({
     email: "",
@@ -16,7 +17,12 @@ const Register = () => {
   });
 
   const registerBtnHandler = () => {
-    registerUser(registerDetails.email,registerDetails.password,registerDetails.firstName,registerDetails.lastName);
+    registerUser(
+      registerDetails.email,
+      registerDetails.password,
+      registerDetails.firstName,
+      registerDetails.lastName
+    );
     navigate("/userprofile");
   };
 
@@ -74,7 +80,7 @@ const Register = () => {
           <div className="auth-div">
             <label>Password</label>
             <input
-              type="password"
+              type= {showPassword ? "text" : "password"}
               placeholder="******"
               value={registerDetails.password}
               name="password"
@@ -82,6 +88,15 @@ const Register = () => {
               onChange={inputChangeHandler}
               required
             ></input>
+            {registerDetails.password ? (
+              <i
+                className={`fa pw ${showPassword ? "fa-eye" : "fa-eye-slash"}`}
+                aria-hidden="true"
+                onClick={()=>{setShowPassword(!showPassword)}}
+              ></i>
+            ) : (
+              ""
+            )}
           </div>
           <div className="auth-btn">
             <button onClick={registerBtnHandler}>Register</button>
