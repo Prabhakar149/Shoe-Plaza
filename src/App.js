@@ -15,6 +15,7 @@ import Product from "./Pages/Product/Product";
 import ProductDetails from "./Pages/Product/ProductDetails";
 import UserProfile from "./Pages/UserProfile/UserProfile";
 import Checkout from "./Pages/Checkout/Checkout";
+import Error from "./Pages/404/Error";
 
 
 function App() {
@@ -49,6 +50,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/product" element={<Product />} />
         <Route path="/product/:productId" element={<ProductDetails />} />
+        <Route path="*" element={<Error/>} />
         <Route path="/mockman" element={<Mockman />} />
         <Route
           path="/userprofile"
