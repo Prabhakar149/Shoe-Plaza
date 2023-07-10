@@ -21,6 +21,7 @@ const Home = () => {
   };
 
   useEffect(() => {
+    window.scrollTo(0,0)
     setLoader(true);
     setTimeout(() => setLoader(false), 500);
     dispatch({

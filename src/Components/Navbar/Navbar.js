@@ -64,8 +64,8 @@ const Navbar = () => {
               <span className="navbar-link">
                 <i className="icon fa fa-heart" title="Wishlist">
                   {token && (
-                    <span style={{ display: wishlist.length === 0 && "none" }}>
-                      {wishlist.length}
+                    <span style={{ display: wishlist?.length === 0 && "none" }}>
+                      {wishlist?.length}
                     </span>
                   )}
                 </i>

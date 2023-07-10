@@ -20,10 +20,10 @@ const ProductCard = ({ product }) => {
 
   const [isbtnClicked,setIsBtnClicked] = useState(false);
 
-  const cartBtnTxt = cart.find((item) => item._id === _id)
+  const cartBtnTxt = cart?.find((item) => item._id === _id)
     ? "Go to Cart"
     : "Add to Cart";
-  const wishlistIconColor = wishlist.find((item) => item._id === _id)
+  const wishlistIconColor = wishlist?.find((item) => item._id === _id)
     ? "red"
     : "gray";
 

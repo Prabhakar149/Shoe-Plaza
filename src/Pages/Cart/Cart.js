@@ -4,21 +4,31 @@ import { useNavigate } from "react-router";
 import { useData } from "../../contexts/DataContext";
 import CartDetails from "./CartDetails";
 import CartPrice from "./CartPrice";
+import { useEffect } from "react";
+import Loader from "../../Components/Loader/Loader";
 
 
 const Cart = () => {
 
   const navigate = useNavigate();
 
-  const { cart } = useData();
+  const { cart, loader, setLoader } = useData();
   const cartLength = cart.length;
 
   const checkoutBtnHandler = () =>{
     navigate("/checkout");
   }
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setLoader(true);
+    setTimeout(() => setLoader(false), 500);
+  }, [setLoader]);
+
   return (
+    
     <div className="cart-container">
+    {loader && <Loader />}
       <h2>My Cart ({cartLength})</h2>
       {cartLength > 0 ? (
         <div className="cart-details-main">
