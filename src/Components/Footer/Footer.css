@@ -29,4 +29,5 @@ a{
 }
 .footer-links>ul>li>a:hover{
   color: blue;
+  font-size: 1.6rem;
 }
