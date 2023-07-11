@@ -1,14 +1,14 @@
 import "./Navbar.css";
 import { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-
+import { toast } from "react-toastify";
 import { useData } from "../../contexts/DataContext";
 import { useAuth } from "../../contexts/AuthContext";
 
 const Navbar = () => {
   const navigate = useNavigate();
   const { products, cart, wishlist, dispatch } = useData();
-  const { token } = useAuth();
+  const { token, setToken, setUser } = useAuth();
   const [searchInput, setSearchInput] = useState();
 
   const activeLink = ({ isActive }) => {
@@ -28,6 +28,19 @@ const Navbar = () => {
     setSearchInput(e.target.value);
     navigate("/product");
   };
+
+  const logoutIconHandle = () =>{
+    localStorage.removeItem("login");
+    localStorage.removeItem("user");
+    setToken("");
+    setUser("");
+    dispatch({
+      type: "CLEAR",
+      payload: products,
+    });
+    navigate("/login");
+    toast.success("Logged out successfully !");
+  }
 
   useEffect(() => {
     dispatch({
@@ -93,6 +106,15 @@ const Navbar = () => {
                 )}
               </span>
             </NavLink>
+
+            <NavLink to="/login" style={activeLink}>
+              <span className="navbar-link" onClick={logoutIconHandle}>
+                {token && (
+                  <i class="icon fa fa-sign-out" title="logout"></i>
+                )}
+              </span>
+            </NavLink>
+
           </div>
         </nav>
       </div>
