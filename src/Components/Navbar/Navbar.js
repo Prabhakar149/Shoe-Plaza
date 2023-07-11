@@ -110,7 +110,7 @@ const Navbar = () => {
             <NavLink to="/login" style={activeLink}>
               <span className="navbar-link" onClick={logoutIconHandle}>
                 {token && (
-                  <i class="icon fa fa-sign-out" title="logout"></i>
+                  <i className="icon fa fa-sign-out" title="logout"></i>
                 )}
               </span>
             </NavLink>

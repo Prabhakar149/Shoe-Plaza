@@ -1,14 +1,18 @@
 import "./CartPrice.css";
 import { useData } from "../../contexts/DataContext";
+import { useEffect } from "react";
 
 const CartPrice = () => {
-  const { cart } = useData();
+  const { cart,totalPrice,setTotalPrice } = useData();
 
   const totalOriginalPrice = cart?.reduce(
     (acc, { original_price, qty }) => acc + original_price * qty,
     0
   );
-  const totalPrice = cart?.reduce((acc, { price, qty }) => acc + price * qty, 0);
+  useEffect(()=>{
+    setTotalPrice(cart?.reduce((acc, { price, qty }) => acc + price * qty, 0))
+  },[cart,totalPrice,setTotalPrice])
+  
   const discount = totalOriginalPrice - totalPrice;
 
   return (

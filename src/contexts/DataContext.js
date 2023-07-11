@@ -14,6 +14,7 @@ const DataProvider = ({ children }) => {
   const [state, dispatch] = useReducer(dataReducer, initialState);
   const [drawer, setDrawer] = useState(false);
   const [loader, setLoader] = useState(false);
+  const [totalPrice,setTotalPrice] = useState();
 
   const fetchCategoryData = async () => {
     try {
@@ -69,7 +70,9 @@ const DataProvider = ({ children }) => {
         drawer,
         setDrawer,
         loader,
-        setLoader
+        setLoader,
+        totalPrice,
+        setTotalPrice
       }}
     >
       {children}

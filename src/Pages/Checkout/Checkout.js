@@ -4,14 +4,20 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router";
 
 import { useData } from "../../contexts/DataContext";
+import { useAuth } from "../../contexts/AuthContext";
 import CartPrice from "../Cart/CartPrice";
 import Loader from "../../Components/Loader/Loader";
+import { razorPay } from "../../Services/razorPay";
+import { removeFromCart } from "../../Services/cartService";
 
 const Checkout = () => {
-  const { address, cart, loader, setLoader } = useData();
+  const { address, cart, loader,dispatch, setLoader, totalPrice } = useData();
+  const {token} = useAuth()
   const navigate = useNavigate();
   const [addressClickedId, setAddressClickedId] = useState("");
   const [deliveryAddress, setDeliveryAddress] = useState();
+
+  const cartItemsId = cart.map(({ _id }) => _id);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -31,7 +37,8 @@ const Checkout = () => {
       if(!deliveryAddress){
         toast.warning("Please select an address !");
       }else{
-        toast.success("This is just a demo app !");
+        razorPay(totalPrice,cartItemsId,removeFromCart,dispatch,token,navigate);
+        toast.success("Your Order Placed !");
       }
     }else{
       toast.warning("Please add an address !");
