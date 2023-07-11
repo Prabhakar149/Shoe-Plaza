@@ -1,16 +1,23 @@
 import "./Checkout.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router";
 
 import { useData } from "../../contexts/DataContext";
 import CartPrice from "../Cart/CartPrice";
+import Loader from "../../Components/Loader/Loader";
 
 const Checkout = () => {
-  const { address, cart } = useData();
+  const { address, cart, loader, setLoader } = useData();
   const navigate = useNavigate();
   const [addressClickedId, setAddressClickedId] = useState("");
   const [deliveryAddress, setDeliveryAddress] = useState();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setLoader(true);
+    setTimeout(() => setLoader(false), 500);
+  }, [setLoader]);
 
   const addressInputHandle = (e, id, add) => {
     if (e.target.checked) {
@@ -35,6 +42,7 @@ const Checkout = () => {
 
   return (
     <>
+      {loader && <Loader />}
       <div className="checkout-heading">
         <h2>Checkout</h2>
       </div>
