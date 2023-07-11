@@ -15,7 +15,7 @@ const Checkout = () => {
   const {token} = useAuth()
   const navigate = useNavigate();
   const [addressClickedId, setAddressClickedId] = useState("");
-  const [deliveryAddress, setDeliveryAddress] = useState();
+  const [deliveryAddress, setDeliveryAddress] = useState(address[0]);
 
   const cartItemsId = cart.map(({ _id }) => _id);
 
@@ -71,6 +71,7 @@ const Checkout = () => {
                   <input
                     type="radio"
                     name="address-radio"
+                    checked={deliveryAddress.id === id}
                     onChange={(e) => {
                       addressInputHandle(e, id, add);
                     }}
