@@ -15,6 +15,7 @@ const DataProvider = ({ children }) => {
   const [drawer, setDrawer] = useState(false);
   const [loader, setLoader] = useState(false);
   const [totalPrice,setTotalPrice] = useState();
+  const [deliveryAddress, setDeliveryAddress] = useState(state.address[0]);
 
   const fetchCategoryData = async () => {
     try {
@@ -66,13 +67,16 @@ const DataProvider = ({ children }) => {
         sortByPrice:state.sortByPrice,
         search:state.search,
         address:state.address,
+        orderPlacedItems:state.orderPlacedItems,
         dispatch,
         drawer,
         setDrawer,
         loader,
         setLoader,
         totalPrice,
-        setTotalPrice
+        setTotalPrice,
+        deliveryAddress, 
+        setDeliveryAddress
       }}
     >
       {children}

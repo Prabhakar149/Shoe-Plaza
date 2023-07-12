@@ -16,6 +16,7 @@ import ProductDetails from "./Pages/Product/ProductDetails";
 import UserProfile from "./Pages/UserProfile/UserProfile";
 import Checkout from "./Pages/Checkout/Checkout";
 import Error from "./Pages/404/Error";
+import OrderPlaced from "./Pages/OrderPlaced/OrderPlaced";
 
 
 function App() {
@@ -65,6 +66,14 @@ function App() {
           element={
             <RequireAuth>
               <Checkout/>
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/orderplaced"
+          element={
+            <RequireAuth>
+              <OrderPlaced/>
             </RequireAuth>
           }
         />

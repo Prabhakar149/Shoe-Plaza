@@ -11,11 +11,19 @@ import { razorPay } from "../../Services/razorPay";
 import { removeFromCart } from "../../Services/cartService";
 
 const Checkout = () => {
-  const { address, cart, loader,dispatch, setLoader, totalPrice } = useData();
-  const {token} = useAuth()
+  const {
+    address,
+    cart,
+    loader,
+    dispatch,
+    setLoader,
+    totalPrice,
+    deliveryAddress,
+    setDeliveryAddress,
+  } = useData();
+  const { token } = useAuth();
   const navigate = useNavigate();
-  const [addressClickedId, setAddressClickedId] = useState(address[0].id);
-  const [deliveryAddress, setDeliveryAddress] = useState(address[0]);
+  const [addressClickedId, setAddressClickedId] = useState(deliveryAddress.id);
 
   const cartItemsId = cart.map(({ _id }) => _id);
 
@@ -32,20 +40,27 @@ const Checkout = () => {
     }
   };
 
-  const orderBtnHandler = () =>{
-    if(address.length>0){
-      if(!deliveryAddress){
+  const orderBtnHandler = () => {
+    if (address.length > 0) {
+      if (!deliveryAddress) {
         toast.warning("Please select an address !");
-      }else{
-        razorPay(totalPrice,cartItemsId,removeFromCart,dispatch,token,navigate);
-        toast.success("Your Order Placed !");
+      } else {
+        razorPay(
+          totalPrice,
+          cartItemsId,
+          removeFromCart,
+          dispatch,
+          token,
+          navigate,
+          cart,
+          toast
+        );
       }
-    }else{
+    } else {
       toast.warning("Please add an address !");
-      navigate("/userprofile")
+      navigate("/userprofile");
     }
-   
-  }
+  };
 
   return (
     <>

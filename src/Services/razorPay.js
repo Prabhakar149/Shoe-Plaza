@@ -1,4 +1,4 @@
-export const razorPay = (totalAmount,cartItemsId,removeFromCart,dispatch,token,navigate) =>{
+export const razorPay = (totalAmount,cartItemsId,removeFromCart,dispatch,token,navigate,cart,toast) =>{
     var options = {
         key: "rzp_test_3kwuxJbyriB8la",
         key_secret: "X1IRN4Q9EkD6e551QsikyfFB",
@@ -9,8 +9,9 @@ export const razorPay = (totalAmount,cartItemsId,removeFromCart,dispatch,token,n
         handler: function (response) {
           localStorage.setItem("payment_key", response.razorpay_payment_id);
           cartItemsId?.forEach((_id) => removeFromCart(token,_id, dispatch));
-        //   orderDispatch({ type: "ORDER_PLACED_ITEMS", payload: cart });
-          navigate("/");
+          dispatch({ type: "ORDER_PLACED_ITEMS", payload: cart });
+          navigate("/orderplaced");
+          toast.success("Your Order Placed !");
         },
         prefill: {
           name: "Prabhakar",

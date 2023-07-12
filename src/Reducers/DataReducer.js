@@ -10,6 +10,7 @@ export const initialState = {
   sortByRating: "",
   sortByPrice: "",
   search: "",
+  orderPlacedItems:[],
   address: [
     {
       id: uuid(),
@@ -118,6 +119,11 @@ export const dataReducer = (state, action) => {
         ...state,
         wishlist: action.payload,
       };
+    case "ORDER_PLACED_ITEMS":
+      return{
+        ...state,
+        orderPlacedItems:action.payload
+      }
     default:
       return state;
   }
