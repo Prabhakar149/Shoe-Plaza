@@ -9,6 +9,7 @@
     position: fixed;
     z-index: 9;
     background-color: white;
+    overflow-y: auto;
 }
 .filter-heading,.filter-range{
     display: flex;
