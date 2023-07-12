@@ -47,17 +47,11 @@
     padding: 2rem 1rem;
     text-align: left;
 }
+.cart-price-card-btn{
+    margin-top: 0;
+}
 .cart-price-card-btn > button {
     width: 14.8rem;
-    height: 2rem;
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: var(--primary-color);
-    color: white;
-    font-size: 1rem;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-weight: bold;
     margin-left: 2.6rem;
     margin-top: 1rem;
   }
@@ -78,4 +72,10 @@
         height: 26rem;
         position: sticky;
     }
+    .cart-price-card-btn > button {
+        width: 18rem;
+        height: 2rem;
+        margin-left: 1rem;
+        margin-top: 1rem;
+      }
 }

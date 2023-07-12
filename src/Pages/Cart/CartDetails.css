@@ -21,7 +21,6 @@
 .cart-item-brand-category > p {
   color: var(--gray);
 }
-
 .quantity-btn{
     margin-right: 10px;
     width: 28px;
@@ -30,6 +29,10 @@
     border-radius: 50%;
     background-color: var(--primary-color);
     cursor: pointer;
+}
+.quantity-btn:hover{
+  background-color: var(--secondary-color);
+  color: #fff;
 }
 .quantity{
     margin-right: 10px;
@@ -56,18 +59,6 @@
 }
 .cart-item-card-btn > button {
   width: 14.8rem;
-  height: 2rem;
-  border: 1px solid var(--primary-color);
-  border-radius: 5px;
-  cursor: pointer;
-  background-color: var(--primary-color);
-  color: white;
-  font-size: 1rem;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-weight: bold;
-}
-.cart-item-card-btn > button:hover {
-  background-color: var(--secondary-color);
 }
 .item-add-wishlist > button {
   background-color: var(--white);

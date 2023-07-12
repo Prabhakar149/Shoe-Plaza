@@ -56,18 +56,18 @@ const CartDetails = ({ product }) => {
 
         <div>
           <button
-            className="quantity-btn decrement-btn"
+            className="quantity-btn"
             onClick={() => updateCartQtyBtnHandler("Decrease")}
             disabled={qty === 1 ? true : false}
             style={{
-              backgroundColor: qty === 1 ? "rgb(225, 223, 223)" : "#4F709C",
+              backgroundColor: qty === 1 ? "rgb(225, 223, 223)" : "",
             }}
           >
             -
           </button>
           <span className="quantity">{qty}</span>
           <button
-            className="quantity-btn increment-btn"
+            className="quantity-btn"
             onClick={() => updateCartQtyBtnHandler("Increase")}
           >
             +
@@ -85,13 +85,13 @@ const CartDetails = ({ product }) => {
         </div>
 
         <div>
-          <div className="cart-item-card-btn item-add-cart">
+          <div className="primary-btn cart-item-card-btn">
             <button onClick={removeCartBtnHandler}>
               {" "}
               <i className="fa fa-shopping-cart"></i> Remove from Cart
             </button>
           </div>
-          <div className="cart-item-card-btn item-add-wishlist">
+          <div className="primary-btn secondary-btn cart-item-card-btn">
             <button onClick={wishlistBtnHandler}>
               {" "}
               <i className="fa fa-heart"></i> {wishlistBtnTxt}

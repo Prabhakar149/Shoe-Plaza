@@ -54,25 +54,6 @@
     text-decoration: line-through;
     margin-left: 14px;
 }
-.add-to-cart{
-    margin-top: 1.4rem;
-}
-.add-to-cart>button{
-    width: 15rem;
-    height: 2rem;
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: var(--primary-color);
-    color: white;
-    font-size: 1rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bold;
-}
-.add-to-cart>button:hover{
-    background-color: var(--secondary-color);
-}
-
 
 
 /* _________________________________________________ */
@@ -105,17 +86,5 @@
     .per{
         margin-top: 7px;
     }
-    .add-to-cart{
-        margin-top: 0.5rem;
-    }
-    .add-to-cart>button{
-        width: 7rem;
-        height: 1.7rem;
-        font-size: 1rem;
-        border-radius: 6px;
-        font-family:inherit
-    }
-    .add-to-cart>button:hover{
-        background-color: var(--primary-color)
-    }
+    
 }

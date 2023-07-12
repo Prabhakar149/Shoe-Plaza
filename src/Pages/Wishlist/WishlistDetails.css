@@ -48,23 +48,8 @@
   .wishlist-item-card-btn > button {
     width: 14.8rem;
     height: 2.5rem;
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: var(--primary-color);
-    color: white;
-    font-size: 1rem;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-weight: bold;
   }
-  .wishlist-item-card-btn > button:hover {
-    background-color: var(--secondary-color);
-  }
-  .item-wishlist > button {
-    background-color: var(--white);
-    color: var(--primary-color);
-  }
-  
+    
   /* _______________________________________________________ */
   
   @media screen and (max-width: 750px) {

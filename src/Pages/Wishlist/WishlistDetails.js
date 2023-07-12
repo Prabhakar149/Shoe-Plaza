@@ -66,13 +66,13 @@ const WishlistDetails = ({ product }) => {
           </div>
 
           <div className="wishlist-btn-container">
-            <div className="wishlist-item-card-btn">
+            <div className="primary-btn wishlist-item-card-btn">
               <button onClick={cartBtnHandler}>
                 {" "}
                 <i className="fa fa-shopping-cart"></i> {cartBtnTxt}
               </button>
             </div>
-            <div className="wishlist-item-card-btn item-wishlist">
+            <div className="primary-btn secondary-btn wishlist-item-card-btn">
               <button onClick={wishlistBtnHandler}>
                 {" "}
                 <i className="fa fa-heart"></i> Remove From Wishlist

@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -6,29 +6,31 @@
 :root {
   --primary-color: #e3bd23;
   --dark-primary-color: #816907;
-  --secondary-color:#a19400;
+  --secondary-color: #a19400;
 
-  --primary-color: #4F709C ;
-  --secondary-color:#213555;
+  --primary-color: #4f709c;
+  --secondary-color: #213555;
   --white: #ffffff;
-  --gray:gray;
+  --gray: gray;
 }
-body{
+body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   -webkit-appearance: none;
   width: 5px;
 }
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   border-radius: 4px;
   background-color: var(--gray);
 }
 
-.shop-now-btn{
+/* ------------------------------------- */
+
+.shop-now-btn {
   width: 10rem;
   height: 2rem;
   border: 1px solid var(--primary-color);
@@ -46,3 +48,42 @@ body{
   background-color: var(--secondary-color);
 }
 
+.primary-btn {
+  margin-top: 1.4rem;
+}
+.primary-btn > button {
+  width: 15rem;
+  height: 2rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+.primary-btn > button:hover {
+  background-color: var(--secondary-color);
+}
+.secondary-btn> button {
+  background-color: var(--white);
+  color: var(--primary-color);
+}
+.secondary-btn > button:hover{
+  color: #fff;
+}
+
+/* ___________________________________________________________________ */
+
+@media screen and (max-width: 750px) {
+  .primary-btn {
+    margin-top: 0.5rem;
+  }
+  .primary-btn > button {
+    width: 7rem;
+    height: 1.7rem;
+    border-radius: 6px;
+    font-family: inherit;
+  }
+}

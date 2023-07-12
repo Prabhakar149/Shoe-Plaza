@@ -99,7 +99,7 @@ const ProductCard = ({ product }) => {
           </div>
         </div>
 
-        <div className="add-to-cart">
+        <div className="primary-btn">
           <button onClick={addCartButtonHandler} disabled={isbtnClicked ? true : false}>
             {" "}
             <i className="fa fa-shopping-cart"></i> {cartBtnTxt}

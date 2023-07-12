@@ -95,28 +95,6 @@ hr {
     color: black;
     font-weight: bold;
 }
-.product-card-btn{
-    margin-top: 1.4rem;
-}
-.product-card-btn>button{
-    width: 15rem;
-    height: 2rem;
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: var(--primary-color);
-    color: white;
-    font-size: 1rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bold;
-}
-.product-card-btn>button:hover{
-    background-color: var(--secondary-color);
-}
-.add-wishlist>button{
-    background-color: var(--white);
-    color: var(--primary-color);
-}
 
 /* ----------------------------------------------- */
 
@@ -150,8 +128,12 @@ hr {
   .product-price-details {
     margin-top: -1.5rem;
   }
+  .product-card-btn{
+    margin-top: 1.4rem;
+  }
   .product-card-btn>button{
     width: 18rem;
+    height: 2rem;
 }
  
 }

@@ -108,7 +108,7 @@ const ProductDetails = () => {
             </div>
 
             <div>
-              <div className="product-card-btn add-cart">
+              <div className="primary-btn product-card-btn">
                 <button
                   onClick={addCartButtonHandler}
                   disabled={isbtnClicked ? true : false}
@@ -117,7 +117,7 @@ const ProductDetails = () => {
                   <i className="fa fa-shopping-cart"></i> {cartBtnTxt}{" "}
                 </button>
               </div>
-              <div className="product-card-btn add-wishlist">
+              <div className="primary-btn product-card-btn secondary-btn">
                 <button onClick={addWishlistButtonHandler}>
                   {" "}
                   <i className="fa fa-heart"></i> {wishlistBtnTxt}

@@ -39,7 +39,7 @@ const Cart = () => {
           <div className="cart-price-details">
             <CartPrice />
 
-            <div className="cart-price-card-btn">
+            <div className="primary-btn cart-price-card-btn">
               <button onClick={checkoutBtnHandler}>Checkout</button>
             </div>
           </div>
