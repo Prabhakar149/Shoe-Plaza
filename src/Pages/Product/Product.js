@@ -1,6 +1,6 @@
 import "./Product.css";
 import { useEffect } from "react";
-
+import no_product from "../../assets/no-product.png";
 import { useData } from "../../contexts/DataContext";
 import ProductsFilter from "../../Components/ProductsFilter/ProductsFilter";
 import ProductCard from "./ProductCard";
@@ -101,7 +101,10 @@ const Product = () => {
                 <p>({finalProducts.length} products)</p>
               </>
             ) : (
-              <p>No Products to show</p>
+              <>
+               <img src={no_product} alt="empty products"></img>
+              </>
+              
             )}
           </div>
           <div className="product-card">

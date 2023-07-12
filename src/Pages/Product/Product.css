@@ -18,6 +18,7 @@
 .product-list-header {
   display: flex;
   align-items: baseline;
+  justify-content: center;
   gap: 1rem;
   margin-left: 1rem;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -25,10 +26,16 @@
 }
 .product-list-header>h2{
   font-size: 1.2rem;
+  text-transform: uppercase;
 }
 .product-list-header>p{
   margin-left: -0.5rem;
   font-weight: bold;
+  text-transform: uppercase;
+}
+.product-list-header>img{
+  margin: 1rem;
+  padding: 2rem;
 }
 .product-card {
   display: flex;
@@ -53,5 +60,9 @@
   .product-list-container {
     padding: 1rem 0rem;
     margin-left: -14rem;
+  }
+  .product-list-header>h2{
+    font-size: 1rem;
+    text-transform: uppercase;
   }
 }
