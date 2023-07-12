@@ -147,7 +147,7 @@ const Checkout = () => {
             )}
           </div>
 
-          <div className="checkout-btn">
+          <div className="primary-btn checkout-btn">
             <button onClick={orderBtnHandler}>Place Order</button>
           </div>
         </div>
