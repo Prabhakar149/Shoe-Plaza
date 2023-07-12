@@ -31,8 +31,8 @@ const OrderPlaced = () => {
         <h2>Order Summary</h2>
         {orderPlacedItems.length === 0 ? (
           <>
-            <h4>You haven't ordered any items !</h4>
-            <button onClick={() => navigate("/product")}>Shop Now</button>
+            <h4>You haven't ordered any items 🙄</h4>
+            <button className="shop-now-btn" onClick={() => navigate("/product")}>Shop Now</button>
           </>
         ) : (
           <div className="my-order">
@@ -75,9 +75,13 @@ const OrderPlaced = () => {
                       <p>Quantity: {qty}</p>
                       <p className="order-item-price">
                         <span className="order-discount-price">₹{price}</span>
-                        <span className="order-original-price">₹{original_price}</span>
+                        <span className="order-original-price">
+                          ₹{original_price}
+                        </span>
                       </p>
-                      <p className="discount-percentage">({getPricePercentage(price, original_price)}% OFF)</p>
+                      <p className="discount-percentage">
+                        ({getPricePercentage(price, original_price)}% OFF)
+                      </p>
                     </div>
                   </div>
                 )

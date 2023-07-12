@@ -1,23 +1,21 @@
 import "./Cart.css";
 import { useNavigate } from "react-router";
-
+import empty_cart from "../../assets/empty_cart.jpg";
 import { useData } from "../../contexts/DataContext";
 import CartDetails from "./CartDetails";
 import CartPrice from "./CartPrice";
 import { useEffect } from "react";
 import Loader from "../../Components/Loader/Loader";
 
-
 const Cart = () => {
-
   const navigate = useNavigate();
 
   const { cart, loader, setLoader } = useData();
   const cartLength = cart.length;
 
-  const checkoutBtnHandler = () =>{
+  const checkoutBtnHandler = () => {
     navigate("/checkout");
-  }
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -26,9 +24,8 @@ const Cart = () => {
   }, [setLoader]);
 
   return (
-    
     <div className="cart-container">
-    {loader && <Loader />}
+      {loader && <Loader />}
       <h2>My Cart ({cartLength})</h2>
       {cartLength > 0 ? (
         <div className="cart-details-main">
@@ -48,7 +45,13 @@ const Cart = () => {
           </div>
         </div>
       ) : (
-        <h3 className="empty-cart">There is no item in the Cart !</h3>
+        <>
+          <img src={empty_cart} alt="Empty Cart"></img>
+          <h3 className="empty-cart">There is No Item in the Cart 😑!</h3>
+          <button className="shop-now-btn" onClick={() => navigate("/product")}>
+            Shop Now
+          </button>
+        </>
       )}
     </div>
   );

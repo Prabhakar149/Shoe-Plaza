@@ -1,12 +1,14 @@
 import "./Wishlist.css";
-
+import empty_wishlist from "../../assets/empty-wishlist.png";
 import { useData } from "../../contexts/DataContext";
 import WishlistDetails from "./WishlistDetails";
 import { useEffect } from "react";
 import Loader from "../../Components/Loader/Loader";
+import { useNavigate } from "react-router";
 
 const Wishlist = () => {
   const { wishlist, loader, setLoader } = useData();
+  const navigate = useNavigate();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -30,7 +32,18 @@ const Wishlist = () => {
             </div>
           </div>
         ) : (
-          <h3 className="empty-wishlist">There is no item in the Wishlist !</h3>
+          <>
+            <img className="empty-wishlist-img" src={empty_wishlist} alt="Empty Wishlist"></img>
+            <h3 className="empty-wishlist">
+              There is No Item in the Wishlist 😥
+            </h3>
+            <button
+              className="shop-now-btn"
+              onClick={() => navigate("/product")}
+            >
+              Shop Now
+            </button>
+          </>
         )}
       </div>
     </>

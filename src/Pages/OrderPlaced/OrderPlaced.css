@@ -9,24 +9,6 @@
     text-transform: uppercase;
     padding: 5px;
 }
-.order-container>button{
-    width: 10rem;
-    height: 2rem;
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: var(--primary-color);
-    color: white;
-    font-size: 1rem;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    font-weight: bold;
-    margin-top: 1rem;
-    text-transform: uppercase;
-}
-.order-container > button:hover {
-    background-color: var(--secondary-color);
-}
-
 .my-order{
     width: 50rem;
     min-height: 22rem;

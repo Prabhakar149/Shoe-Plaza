@@ -28,4 +28,21 @@ body{
   background-color: var(--gray);
 }
 
+.shop-now-btn{
+  width: 10rem;
+  height: 2rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+.shop-now-btn:hover {
+  background-color: var(--secondary-color);
+}
 

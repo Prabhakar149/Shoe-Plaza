@@ -4,8 +4,9 @@
     overflow-x: hidden;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.cart-container>h2{
+.cart-container h2{
     color: var(--primary-color);
+    text-transform: uppercase;
 }
 .empty-cart{
     margin-top: 2rem;
