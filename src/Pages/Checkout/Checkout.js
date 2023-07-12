@@ -14,7 +14,6 @@ const Checkout = () => {
   const { address, cart, loader,dispatch, setLoader, totalPrice } = useData();
   const {token} = useAuth()
   const navigate = useNavigate();
-  const [addressClickedId, setAddressClickedId] = useState("");
   const [deliveryAddress, setDeliveryAddress] = useState(address[0]);
 
   const cartItemsId = cart.map(({ _id }) => _id);
@@ -25,9 +24,8 @@ const Checkout = () => {
     setTimeout(() => setLoader(false), 500);
   }, [setLoader]);
 
-  const addressInputHandle = (e, id, add) => {
+  const addressInputHandle = (e, add) => {
     if (e.target.checked) {
-      setAddressClickedId(id);
       setDeliveryAddress(add);
     }
   };
@@ -65,7 +63,7 @@ const Checkout = () => {
                 <div
                   key={id}
                   className={`user-address-details checkout-address-details ${
-                    addressClickedId === id ? "address-bg" : ""
+                    deliveryAddress.id === id ? "address-bg" : ""
                   }`}
                 >
                   <input
