@@ -9,6 +9,7 @@ import CartPrice from "../Cart/CartPrice";
 import Loader from "../../Components/Loader/Loader";
 import { razorPay } from "../../Services/razorPay";
 import { removeFromCart } from "../../Services/cartService";
+import AddressForm from "../UserProfile/Component/AddressForm";
 
 const Checkout = () => {
   const {
@@ -25,6 +26,22 @@ const Checkout = () => {
   const navigate = useNavigate();
   const [addressClickedId, setAddressClickedId] = useState(deliveryAddress.id);
 
+  const addressData = {
+    fName: "",
+    lName: "",
+    mobile: "",
+    town: "",
+    pincode: "",
+    city: "",
+    state: "",
+  };
+  const [addressForm, setAddressForm] = useState(addressData);
+  const [addNewAddress, setAddNewAddress] = useState(false);
+  const [isEditBtnClicked, setIsBtnClicked] = useState({
+    editBtn: false,
+    addressIndex: null,
+  });
+
   const cartItemsId = cart.map(({ _id }) => _id);
 
   useEffect(() => {
@@ -38,6 +55,12 @@ const Checkout = () => {
       setAddressClickedId(id);
       setDeliveryAddress(add);
     }
+  };
+
+  const addAddressBtnHandler = () => {
+    setAddressForm(addressData);
+    setIsBtnClicked({ editBtn: false, addressIndex: null });
+    setAddNewAddress(!addNewAddress);
   };
 
   const orderBtnHandler = () => {
@@ -104,7 +127,33 @@ const Checkout = () => {
                 </div>
               );
             })}
+
+          <div className="primary-btn checkout-new-address-btn">
+            <button onClick={addAddressBtnHandler}>+ Add New Address</button>
+          </div>
         </div>
+
+        {addNewAddress && (
+          <>
+            <div
+              className="dark-bg"
+              onClick={() => {
+                setAddNewAddress(false);
+              }}
+            >
+              {" "}
+            </div>
+            <div className="user-container address-container checkout-new-address">
+              <AddressForm
+                setAddNewAddress={setAddNewAddress}
+                addressFormData={addressForm}
+                isEditBtnClicked={isEditBtnClicked}
+                setIsBtnClicked={setIsBtnClicked}
+              />
+            </div>
+          </>
+        )}
+
         <div className="checkout-order-summary">
           <div className="order-details">
             <div>

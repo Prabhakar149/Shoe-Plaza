@@ -5,7 +5,12 @@ import { toast } from "react-toastify";
 
 import { useData } from "../../../contexts/DataContext";
 
-const AddressForm = ({ setAddNewAddress, addressFormData, isEditBtnClicked,setIsBtnClicked}) => {
+const AddressForm = ({
+  setAddNewAddress,
+  addressFormData,
+  isEditBtnClicked,
+  setIsBtnClicked,
+}) => {
   const { dispatch } = useData();
 
   const [addressForm, setAddressForm] = useState(addressFormData);
@@ -29,13 +34,11 @@ const AddressForm = ({ setAddNewAddress, addressFormData, isEditBtnClicked,setIs
           payload: [isEditBtnClicked.addressIndex, addressForm],
         });
         setIsBtnClicked({ editBtn: false, addressIndex: null });
-       
-      } 
-      else {
+      } else {
         toast.success("Successfully added the address!");
         dispatch({
           type: "ADD_NEW_ADDRESS",
-          payload: {id:uuid(), ...addressForm},
+          payload: { id: uuid(), ...addressForm },
         });
       }
       setAddNewAddress(false);

@@ -89,7 +89,26 @@
     text-align: start;
     padding: 1rem 1rem;
   }
-
+  .checkout-new-address-btn > button{
+    width: 30rem;
+    height: 3rem;
+} 
+  .dark-bg{
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100vw;
+    min-height: 100vh;
+    z-index: 8;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+  }
+  .checkout-new-address{
+    position: fixed;
+    bottom: 0.1rem;
+    background-color: white;
+    z-index: 10;
+  }
 
 
 /* _____________________________________________________________________ */
@@ -102,7 +121,10 @@
      .checkout-address-details{
         margin-bottom: 2rem;
     }
-     
+    .checkout-new-address-btn > button{
+        width: 20rem;
+        height: 3rem;
+    } 
      .checkout-order-summary{
         width: 20rem;
         margin-bottom: 1rem;
