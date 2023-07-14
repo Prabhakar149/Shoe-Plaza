@@ -1,6 +1,8 @@
 import "./Home.css";
 import { useEffect } from "react";
 import { useNavigate } from "react-router";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
 
 import { useData } from "../../contexts/DataContext";
 import Loader from "../../Components/Loader/Loader";
@@ -8,7 +10,7 @@ import Footer from "../../Components/Footer/Footer";
 
 const Home = () => {
   const navigate = useNavigate();
-  const {products, categories, dispatch, loader, setLoader } = useData();
+  const { products, categories, dispatch, loader, setLoader } = useData();
 
   const categoryClickHandler = (categoryName) => {
     const val = categoryName;
@@ -21,14 +23,14 @@ const Home = () => {
   };
 
   useEffect(() => {
-    window.scrollTo(0,0)
+    window.scrollTo(0, 0);
     setLoader(true);
     setTimeout(() => setLoader(false), 500);
     dispatch({
       type: "CLEAR",
       payload: products,
     });
-  }, [dispatch,products,setLoader]);
+  }, [dispatch, products, setLoader]);
 
   return (
     <>
@@ -38,11 +40,27 @@ const Home = () => {
           <h2>Welcome To Shoe Plaza</h2>
         </div>
 
-        <div className="bg-img-container" onClick={() => navigate("/product")}>
-          <button className="home-btn">
-            Shop Now
-          </button>
-        </div>
+        <Carousel
+          dynamicHeight
+          autoPlay
+          interval="1500"
+          transitionTime="800"
+          
+        >
+          <div
+            className="bg-img-container carousel-1"
+            onClick={() => navigate("/product")}
+          >
+            <button className="home-btn">Shop Now</button>
+          </div>
+          <div
+            className="bg-img-container carousel-2"
+            onClick={() => navigate("/product")}
+          >
+            <button className="home-btn">Shop Now</button>
+          </div>
+        </Carousel>
+
         <div className="home-page-text">
           <div className="heading para">
             <h2>Find The Below Categories</h2>
