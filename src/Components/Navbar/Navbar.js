@@ -29,7 +29,7 @@ const Navbar = () => {
     navigate("/product");
   };
 
-  const logoutIconHandle = () =>{
+  const logoutIconHandle = () => {
     localStorage.removeItem("login");
     localStorage.removeItem("user");
     setToken("");
@@ -40,7 +40,7 @@ const Navbar = () => {
     });
     navigate("/login");
     toast.success("Logged out successfully !");
-  }
+  };
 
   useEffect(() => {
     dispatch({
@@ -107,14 +107,15 @@ const Navbar = () => {
               </span>
             </NavLink>
 
-            <NavLink to="/login" style={activeLink}>
-              <span className="navbar-link" onClick={logoutIconHandle}>
-                {token && (
-                  <i className="icon fa fa-sign-out" title="logout"></i>
-                )}
-              </span>
-            </NavLink>
-
+            {token && (
+              <>
+                <NavLink to="/login" style={activeLink}>
+                  <span className="navbar-link" onClick={logoutIconHandle}>
+                    <i className="icon fa fa-sign-out" title="logout"></i>
+                  </span>
+                </NavLink>
+              </>
+            )}
           </div>
         </nav>
       </div>
