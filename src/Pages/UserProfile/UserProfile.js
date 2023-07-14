@@ -10,7 +10,7 @@ import Loader from "../../Components/Loader/Loader";
 
 const UserProfile = () => {
   const { user, setToken, setUser } = useAuth();
-  const {products, dispatch, address, loader, setLoader } = useData();
+  const { products, dispatch, address, loader, setLoader } = useData();
   const navigate = useNavigate();
   const [isProfileChecked, setIsProfileChecked] = useState(true);
   const [addNewAddress, setAddNewAddress] = useState(false);
@@ -106,8 +106,12 @@ const UserProfile = () => {
                   <span>Email:</span> {email}
                 </p>
               </div>
-
-              <button onClick={logoutButtonHandle}>Logout</button>
+              <div className="profile-button">
+                <button onClick={logoutButtonHandle}>Logout</button>
+                <button className="order-history-btn" onClick={() => navigate("/orderplaced")}>
+                  Order History
+                </button>
+              </div>
             </div>
           ) : (
             <>

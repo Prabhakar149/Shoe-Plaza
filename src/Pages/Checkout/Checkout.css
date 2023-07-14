@@ -121,6 +121,9 @@
      .checkout-address-details{
         margin-bottom: 2rem;
     }
+    .checkout-btn > button {
+        height: 2.5rem;
+      }
     .checkout-new-address-btn > button{
         width: 20rem;
         height: 3rem;

@@ -40,10 +40,15 @@
     font-weight: bold;
     margin-right: 1rem;
 }
-.profile-details>button{
+.profile-button{
+    display: flex;
+    gap:1rem;
+    justify-content: space-around;
+}
+.profile-button>button{
     margin-top: 3rem;
     border: none;
-    width: 6rem;
+    width: 7rem;
     height: 2.3rem;
     color: white;
     background-color: #dc2626;
@@ -52,8 +57,18 @@
     font-weight: bold;
     cursor: pointer;
 }
-.profile-details>button:hover{
+.profile-button>button:hover{
     background-color: #d25656;
+}
+.order-history-btn{
+    background-color: white !important;
+    border: 1px solid gray !important;
+    color: gray !important;
+    width: 8rem !important;
+}
+.order-history-btn:hover{
+    background-color: gray !important;
+    color: white !important;
 }
 
 .address-details{
