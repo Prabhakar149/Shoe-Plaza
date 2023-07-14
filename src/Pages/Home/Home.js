@@ -40,13 +40,7 @@ const Home = () => {
           <h2>Welcome To Shoe Plaza</h2>
         </div>
 
-        <Carousel
-          dynamicHeight
-          autoPlay
-          interval="1500"
-          transitionTime="800"
-          
-        >
+        <Carousel dynamicHeight autoPlay interval="1500" transitionTime="800">
           <div
             className="bg-img-container carousel-1"
             onClick={() => navigate("/product")}
@@ -55,6 +49,12 @@ const Home = () => {
           </div>
           <div
             className="bg-img-container carousel-2"
+            onClick={() => navigate("/product")}
+          >
+            <button className="home-btn">Shop Now</button>
+          </div>
+          <div
+            className="bg-img-container carousel-3"
             onClick={() => navigate("/product")}
           >
             <button className="home-btn">Shop Now</button>

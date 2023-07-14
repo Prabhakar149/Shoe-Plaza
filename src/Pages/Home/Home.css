@@ -21,10 +21,13 @@
     cursor: pointer;
 }
 .carousel-1{
-    background-image: url('../../assets/cover.jpg') !important;
+    background-image: url('../../assets/cover1.jpg') !important;
 }
 .carousel-2{
-    background-image: url('../../assets/cover1.jpg') !important;
+    background-image: url('../../assets/cover2.jpg') !important;
+}
+.carousel-3{
+    background-image: url('../../assets/cover3.jpg') !important;
 }
 .home-btn{
     margin:10rem;
