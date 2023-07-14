@@ -21,7 +21,9 @@
   font-family: "Poppins", sans-serif;
   font-weight: bold;
 }
-
+.home-nav:hover{
+  font-size: 1.6rem;
+}
 .search-icon {
   position: relative;
   right: 6rem;
