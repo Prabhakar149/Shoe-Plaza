@@ -40,7 +40,7 @@ const Home = () => {
           <h2>Welcome To Shoe Plaza</h2>
         </div>
 
-        <Carousel dynamicHeight autoPlay interval="1500" transitionTime="800">
+        <Carousel dynamicHeight autoPlay interval="1400" transitionTime="800">
           <div
             className="bg-img-container carousel-1"
             onClick={() => navigate("/product")}
