@@ -76,7 +76,7 @@ const DataProvider = ({ children }) => {
         totalPrice,
         setTotalPrice,
         deliveryAddress, 
-        setDeliveryAddress
+        setDeliveryAddress,
       }}
     >
       {children}
